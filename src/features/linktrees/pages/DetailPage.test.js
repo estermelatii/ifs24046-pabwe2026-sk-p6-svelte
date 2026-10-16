@@ -46,10 +46,10 @@ describe("DetailPage", () => {
   it("should show a spinner without profile or link tree", () => {
     const { wrapper } = setup({ profile: null });
     expect(wrapper.find(".animate-spin").exists()).toBe(true);
-    expect(wrapper.find("h1").exists()).toBe(false);
+    expect(wrapper.find("h1").text()).toBe("Memuat detail link tree");
 
     const second = setup({ linkTree: null });
-    expect(second.wrapper.find("h1").exists()).toBe(false);
+    expect(second.wrapper.find("h1").text()).toBe("Memuat detail link tree");
   });
 
   it("should load the link tree on mount using the id", () => {

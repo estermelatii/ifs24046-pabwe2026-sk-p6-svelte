@@ -68,15 +68,15 @@
             <Plus size={18} strokeWidth={2.5} />
           </div>
           <div>
-            <h3 class="text-base font-bold text-slate-800">Tambah Link Tree Baru</h3>
-            <p class="text-xs text-slate-500">Buat kumpulan tautan baru</p>
+            <h2 class="text-base font-bold text-slate-800">Tambah Link Tree Baru</h2>
+            <p class="text-xs text-slate-600">Buat kumpulan tautan baru</p>
           </div>
         </div>
         <button
           type="button"
           data-testid="close-add-modal-btn"
           on:click={handleClose}
-          class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+          class="p-1.5 rounded-lg text-slate-600 hover:text-slate-600 hover:bg-slate-100 transition-colors"
         >
           <X size={18} />
         </button>
@@ -85,7 +85,7 @@
       <form on:submit|preventDefault={handleSave} class="p-6 space-y-4">
         <div>
           <label for="add-linktree-title-input" class="block text-sm font-semibold text-slate-700 mb-1.5">
-            Judul <span class="text-red-500">*</span>
+            Judul <span class="text-red-700">*</span>
           </label>
           <input
             id="add-linktree-title-input"
@@ -93,7 +93,7 @@
             data-testid="add-linktree-title-input"
             bind:value={title}
             placeholder="Contoh: Tautan Portofolio Saya"
-            class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all text-sm shadow-xs"
+            class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all text-sm shadow-xs"
           />
         </div>
 
@@ -115,7 +115,7 @@
 
         <div>
           <label for="add-linktree-description-input" class="block text-sm font-semibold text-slate-700 mb-1.5">
-            Deskripsi <span class="text-red-500">*</span>
+            Deskripsi <span class="text-red-700">*</span>
           </label>
           <textarea
             id="add-linktree-description-input"
@@ -123,7 +123,7 @@
             bind:value={description}
             rows="4"
             placeholder="Jelaskan isi kumpulan tautan ini..."
-            class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all text-sm shadow-xs resize-y"
+            class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all text-sm shadow-xs resize-y"
           ></textarea>
         </div>
 

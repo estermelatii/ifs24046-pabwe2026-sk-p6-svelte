@@ -95,15 +95,15 @@
             <PenLine size={18} strokeWidth={2.5} />
           </div>
           <div>
-            <h3 class="text-base font-bold text-slate-800">Ubah Data Link Tree</h3>
-            <p class="text-xs text-slate-500">Perbarui judul, tipe, dan deskripsi</p>
+            <h2 class="text-base font-bold text-slate-800">Ubah Data Link Tree</h2>
+            <p class="text-xs text-slate-600">Perbarui judul, tipe, dan deskripsi</p>
           </div>
         </div>
         <button
           type="button"
           data-testid="close-edit-modal-btn"
           on:click={handleClose}
-          class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+          class="p-1.5 rounded-lg text-slate-600 hover:text-slate-600 hover:bg-slate-100 transition-colors"
         >
           <X size={18} />
         </button>
@@ -112,12 +112,12 @@
       <form on:submit|preventDefault={handleSave} class="p-6 space-y-4">
         {#if fetching}
           <div class="flex items-center justify-center py-10">
-            <LoaderCircle size={32} class="animate-spin text-amber-600" />
+            <LoaderCircle size={32} class="animate-spin text-amber-700" />
           </div>
         {:else}
           <div>
             <label for="edit-linktree-title-input" class="block text-sm font-semibold text-slate-700 mb-1.5">
-              Judul <span class="text-red-500">*</span>
+              Judul <span class="text-red-700">*</span>
             </label>
             <input
               id="edit-linktree-title-input"
@@ -146,7 +146,7 @@
 
           <div>
             <label for="edit-linktree-description-input" class="block text-sm font-semibold text-slate-700 mb-1.5">
-              Deskripsi <span class="text-red-500">*</span>
+              Deskripsi <span class="text-red-700">*</span>
             </label>
             <textarea
               id="edit-linktree-description-input"
@@ -172,7 +172,7 @@
             type="submit"
             data-testid="submit-edit-modal-btn"
             disabled={loading || fetching}
-            class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-amber-600 hover:bg-amber-700 active:bg-amber-800 rounded-xl shadow-md shadow-amber-600/25 transition-all disabled:opacity-60"
+            class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-amber-700 hover:bg-amber-800 active:bg-amber-900 rounded-xl shadow-md shadow-amber-600/25 transition-all disabled:opacity-60"
           >
             {#if loading}
               <LoaderCircle size={18} class="animate-spin" />

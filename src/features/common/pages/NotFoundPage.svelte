@@ -3,7 +3,7 @@
   import { CircleQuestionMark, ArrowLeft, House } from "lucide-svelte";
 </script>
 
-<div class="min-h-screen bg-slate-50 flex items-center justify-center p-4">
+<main class="min-h-screen bg-slate-50 flex items-center justify-center p-4">
   <div class="max-w-md w-full text-center space-y-6 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-100">
     <div class="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mx-auto shadow-inner">
       <CircleQuestionMark size={36} strokeWidth={2.5} />
@@ -12,7 +12,7 @@
     <div class="space-y-2">
       <h1 class="text-4xl font-black text-slate-900 tracking-tight">404</h1>
       <h2 class="text-xl font-bold text-slate-800">Halaman Tidak Ditemukan</h2>
-      <p class="text-sm text-slate-500 leading-relaxed">
+      <p class="text-sm text-slate-600 leading-relaxed">
         Maaf, halaman yang Anda cari tidak dapat ditemukan atau telah dipindahkan.
       </p>
     </div>
@@ -39,4 +39,4 @@
       </button>
     </div>
   </div>
-</div>
+</main>

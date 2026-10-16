@@ -109,15 +109,15 @@
               <Plus size={18} strokeWidth={2.5} />
             {/if}
           </div>
-          <h3 class="text-base font-bold text-slate-800" data-testid="item-modal-title">
+          <h2 class="text-base font-bold text-slate-800" data-testid="item-modal-title">
             {isEdit ? "Ubah Tautan" : "Tambah Tautan"}
-          </h3>
+          </h2>
         </div>
         <button
           type="button"
           data-testid="close-item-modal-btn"
           on:click={handleClose}
-          class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+          class="p-1.5 rounded-lg text-slate-600 hover:text-slate-600 hover:bg-slate-100 transition-colors"
         >
           <X size={18} />
         </button>
@@ -126,7 +126,7 @@
       <form on:submit|preventDefault={handleSave} class="p-6 space-y-4">
         <div>
           <label for="item-title-input" class="block text-sm font-semibold text-slate-700 mb-1.5">
-            Judul Tautan <span class="text-red-500">*</span>
+            Judul Tautan <span class="text-red-700">*</span>
           </label>
           <input
             id="item-title-input"
@@ -134,13 +134,13 @@
             data-testid="item-title-input"
             bind:value={title}
             placeholder="Contoh: GitHub"
-            class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all text-sm shadow-xs"
+            class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all text-sm shadow-xs"
           />
         </div>
 
         <div>
           <label for="item-url-input" class="block text-sm font-semibold text-slate-700 mb-1.5">
-            URL <span class="text-red-500">*</span>
+            URL <span class="text-red-700">*</span>
           </label>
           <input
             id="item-url-input"
@@ -148,7 +148,7 @@
             data-testid="item-url-input"
             bind:value={url}
             placeholder="https://github.com/username"
-            class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all text-sm shadow-xs"
+            class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all text-sm shadow-xs"
           />
         </div>
 

@@ -81,13 +81,13 @@
           <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center">
             <ImagePlus size={18} strokeWidth={2.5} />
           </div>
-          <h3 class="text-base font-bold text-slate-800">Ubah Sampul Link Tree</h3>
+          <h2 class="text-base font-bold text-slate-800">Ubah Sampul Link Tree</h2>
         </div>
         <button
           type="button"
           data-testid="close-cover-modal-btn"
           on:click={handleClose}
-          class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+          class="p-1.5 rounded-lg text-slate-600 hover:text-slate-600 hover:bg-slate-100 transition-colors"
         >
           <X size={18} />
         </button>
@@ -113,7 +113,7 @@
                 <p class="text-sm font-semibold text-slate-700">
                   Klik untuk memilih foto
                 </p>
-                <p class="text-xs text-slate-500 mt-1">PNG, JPG, JPEG (Max. 1MB)</p>
+                <p class="text-xs text-slate-600 mt-1">PNG, JPG, JPEG (Max. 1MB)</p>
               </div>
             {/if}
             <input
@@ -140,7 +140,7 @@
             type="submit"
             data-testid="submit-cover-modal-btn"
             disabled={loading}
-            class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-sky-600 hover:bg-sky-700 active:bg-sky-800 rounded-xl shadow-md shadow-sky-600/25 transition-all disabled:opacity-60"
+            class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-sky-700 hover:bg-sky-800 active:bg-sky-900 rounded-xl shadow-md shadow-sky-600/25 transition-all disabled:opacity-60"
           >
             {#if loading}
               <LoaderCircle size={18} class="animate-spin" />

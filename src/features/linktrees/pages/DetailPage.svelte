@@ -87,6 +87,7 @@
 
 {#if !profile || !linkTree}
   <div class="flex flex-col items-center justify-center py-20">
+    <h1 class="sr-only">Memuat detail link tree</h1>
     <div class="w-8 h-8 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin"></div>
   </div>
 {:else}
@@ -146,7 +147,7 @@
       <div class="p-6 sm:p-8 space-y-6">
         <div class="space-y-3">
           <div class="flex items-center gap-3">
-            <span class="font-mono text-xs font-bold text-slate-400">{"#" + linkTree.id}</span>
+            <span class="font-mono text-xs font-bold text-slate-600">{"#" + linkTree.id}</span>
             <TypeBadge type={linkTree.type} />
           </div>
 
@@ -154,14 +155,14 @@
             {linkTree.title}
           </h1>
 
-          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-600">
             <div class="flex items-center gap-1.5">
               <Calendar size={14} class="shrink-0" />
-              <span>Dibuat: <strong class="text-slate-500">{formatDate(linkTree.created_at)}</strong></span>
+              <span>Dibuat: <strong class="text-slate-600">{formatDate(linkTree.created_at)}</strong></span>
             </div>
             <div class="flex items-center gap-1.5">
               <Calendar size={14} class="shrink-0" />
-              <span>Diperbarui: <strong class="text-slate-500">{formatDate(linkTree.updated_at)}</strong></span>
+              <span>Diperbarui: <strong class="text-slate-600">{formatDate(linkTree.updated_at)}</strong></span>
             </div>
           </div>
         </div>
@@ -173,7 +174,7 @@
           {#if linkTree.description}
             {linkTree.description}
           {:else}
-            <p class="italic text-slate-400">Tidak ada deskripsi untuk link tree ini.</p>
+            <p class="italic text-slate-600">Tidak ada deskripsi untuk link tree ini.</p>
           {/if}
         </div>
 
@@ -193,7 +194,7 @@
           </div>
 
           {#if items.length === 0}
-            <div data-testid="items-empty" class="py-10 text-center text-slate-400 border border-dashed border-slate-200 rounded-2xl">
+            <div data-testid="items-empty" class="py-10 text-center text-slate-600 border border-dashed border-slate-200 rounded-2xl">
               <Link size={32} class="mx-auto text-slate-300 mb-2" />
               <p class="text-sm font-medium">Belum ada tautan.</p>
             </div>
@@ -215,7 +216,7 @@
                     </div>
                     <div class="min-w-0">
                       <p class="font-semibold text-slate-800 truncate group-hover:text-indigo-600">{item.title}</p>
-                      <p class="text-xs text-slate-400 truncate">{item.url}</p>
+                      <p class="text-xs text-slate-600 truncate">{item.url}</p>
                     </div>
                   </a>
                   <div class="inline-flex items-center gap-1.5 shrink-0">
@@ -223,7 +224,7 @@
                       type="button"
                       data-testid={`edit-item-${item.id}`}
                       on:click={() => handleEditItem(item)}
-                      class="p-1.5 text-slate-600 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition-colors"
+                      class="p-1.5 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-lg transition-colors"
                       title="Ubah Tautan"
                     >
                       <Pencil size={16} />
@@ -232,7 +233,7 @@
                       type="button"
                       data-testid={`delete-item-${item.id}`}
                       on:click={() => handleDeleteItem(item)}
-                      class="p-1.5 text-slate-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                      class="p-1.5 text-slate-600 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors"
                       title="Hapus Tautan"
                     >
                       <Trash2 size={16} />
